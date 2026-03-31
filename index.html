@@ -9,11 +9,12 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050816;
-      color: #f5f5f7;
+      background: #f5f7fb;
+      color: #111827;
     }
     .hero {
-      background: radial-gradient(circle at top left, #00a8a8, #0b1020 55%, #050816 100%);
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: #ecfeff;
       padding: 2.5rem 1.5rem 3rem;
     }
     .hero-inner {
@@ -61,28 +62,29 @@
       font-size: 0.95rem;
     }
     .btn.primary {
-      background: #22c55e;
-      color: #02131a;
-      border: 1px solid rgba(34, 197, 94, 0.9);
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.6);
+      background: #fbbf24;
+      color: #1f2937;
+      border: 1px solid rgba(234, 179, 8, 0.9);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.35);
     }
     .btn.primary:hover {
-      background: #16a34a;
+      background: #f59e0b;
     }
     .btn.ghost {
-      background: rgba(15, 23, 42, 0.8);
-      color: #f5f5f7;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.08);
+      color: #ecfeff;
+      border: 1px solid rgba(226, 232, 240, 0.6);
     }
     .hero-panel {
       flex: 0 0 280px;
       max-width: 320px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(255, 255, 255, 0.96);
       border-radius: 1rem;
       padding: 1rem 1.2rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      border: 1px solid #d1d5db;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
       font-size: 0.9rem;
+      color: #111827;
     }
     .hero-panel h2 {
       margin: 0 0 0.4rem;
@@ -90,11 +92,10 @@
     }
     .hero-panel p {
       margin: 0.15rem 0;
-      color: #e5e7eb;
     }
     .hero-panel .small {
       font-size: 0.8rem;
-      color: #9ca3af;
+      color: #6b7280;
     }
 
     main {
@@ -117,11 +118,11 @@
     }
     .column {
       flex: 1 1 260px;
-      background: #0b1020;
+      background: #ffffff;
       border-radius: 0.9rem;
       padding: 1.1rem 1.3rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
       font-size: 0.95rem;
     }
     .column h3 {
@@ -133,7 +134,7 @@
       margin: 0.4rem 0 0;
       padding-left: 1.1rem;
       list-style: disc;
-      color: #e5e7eb;
+      color: #111827;
     }
 
     .nav-links {
@@ -144,20 +145,11 @@
       font-size: 0.92rem;
     }
     .nav-links a {
-      color: #a5f3fc;
+      color: #ecfeff;
       text-decoration: none;
     }
     .nav-links a:hover {
       text-decoration: underline;
-    }
-
-    .site-footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 1rem 1.5rem 1.6rem;
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #9ca3af;
-      text-align: center;
     }
 
     @media (max-width: 640px) {
@@ -172,127 +164,154 @@
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="hero-eyebrow">Inner West Podiatry – Glebe</div>
-        <h1>Friendly, thorough foot care for busy Inner West people.</h1>
-        <p class="hero-tagline">
-          From stubborn heel pain and ingrown toenails to kids’ growing feet and diabetic checks – Inner West Podiatry
-          is here to keep you moving comfortably around Glebe, Annandale, Forest Lodge and beyond.
-        </p>
-        <div class="hero-actions">
-          <a href="#book" class="btn primary">Book an appointment</a>
-          <a href="#what-we-treat" class="btn ghost">What we treat</a>
-        </div>
-        <div class="nav-links">
-          <a href="about.html">About your podiatrist</a>
-          <a href="conditions.html">Conditions &amp; treatments</a>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <div class="top-nav-title">Inner West Podiatry</div>
+        <div class="top-nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="conditions.html">Conditions</a>
           <a href="kids-feet.html">Children&apos;s feet</a>
-          <a href="diabetes-foot-care.html">Diabetes foot care</a>
+          <a href="diabetes-foot-care.html">Diabetes</a>
           <a href="faq.html">Fees &amp; FAQs</a>
         </div>
       </div>
-      <aside class="hero-panel" id="book">
-        <h2>Clinic details</h2>
-        <p><strong>Location:</strong><br />Ground Floor, 170 St Johns Road, Glebe NSW 2037</p>
-        <p><strong>Phone:</strong><br /><a href="tel:0280406687" style="color:#a5f3fc;text-decoration:none;">(02) 8040 6687</a></p>
-        <p><strong>Home visits:</strong><br />Available for Glebe &amp; surrounding suburbs by arrangement.</p>
-        <p class="small">Please call the clinic for current opening hours and appointment availability.</p>
-      </aside>
-    </div>
-  </header>
+    </nav>
 
-  <main>
-    <section class="section" id="who-we-are">
-      <h2>Who we are</h2>
-      <div class="columns">
-        <div class="column">
-          <h3>Caring, experienced podiatry in the Inner West</h3>
-          <p>
-            Inner West Podiatry is a friendly local podiatry clinic based in Glebe, focused on helping people of all
-            ages walk more comfortably. With experience across general foot care, biomechanics and long-term
-            conditions, we take the time to listen, explain and build a plan that makes sense in real life.
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">Inner West Podiatry – Glebe</div>
+          <h1>Friendly, thorough foot care for busy Inner West people.</h1>
+          <p class="hero-tagline">
+            From stubborn heel pain and ingrown toenails to kids’ growing feet and diabetic checks – Inner West Podiatry
+            is here to keep you moving comfortably around Glebe, Annandale, Forest Lodge and beyond.
           </p>
-          <p>
-            Whether you&apos;re on your feet all day at work, chasing kids in the park, training for a run or managing a
-            health condition like diabetes, we work with you to get your feet feeling as good as they can.
-          </p>
+          <div class="hero-actions">
+            <a href="#book" class="btn primary">Book an appointment</a>
+            <a href="#what-we-treat" class="btn ghost">What we treat</a>
+          </div>
+          <div class="nav-links">
+            <a href="about.html">About your podiatrist</a>
+            <a href="conditions.html">Conditions &amp; treatments</a>
+            <a href="kids-feet.html">Children&apos;s feet</a>
+            <a href="diabetes-foot-care.html">Diabetes foot care</a>
+            <a href="faq.html">Fees &amp; FAQs</a>
+          </div>
         </div>
-        <div class="column">
-          <h3>Personal, one-on-one care</h3>
-          <p>
-            Every appointment is one-on-one with your podiatrist, with time to go through your history, examine your
-            feet and lower limbs, and explain what&apos;s going on in plain language. You&apos;ll leave knowing what the plan is,
-            why it should help, and what you can do at home between visits.
-          </p>
-          <p>
-            Inner West Podiatry welcomes patients referred under Medicare chronic disease plans, Department of Veterans&apos;
-            Affairs, private health insurance and self-referred patients.
-          </p>
-        </div>
+        <aside class="hero-panel" id="book">
+          <h2>Clinic details</h2>
+          <p><strong>Location:</strong><br />Ground Floor, 170 St Johns Road, Glebe NSW 2037</p>
+          <p><strong>Phone:</strong><br /><a href="tel:0280406687" style="color:#0f766e;text-decoration:none;">(02) 8040 6687</a></p>
+          <p><strong>Home visits:</strong><br />Available for Glebe &amp; surrounding suburbs by arrangement.</p>
+          <p class="small">Please call the clinic for current opening hours and appointment availability.</p>
+        </aside>
       </div>
-    </section>
+    </header>
 
-    <section class="section" id="what-we-treat">
-      <h2>What we treat</h2>
-      <div class="columns">
-        <div class="column">
-          <h3>Pain &amp; overuse problems</h3>
-          <ul class="treat-list">
-            <li>Heel pain &amp; plantar fasciitis</li>
-            <li>Arch pain and flat feet</li>
-            <li>Forefoot pain &amp; Morton&apos;s neuroma</li>
-            <li>Shin splints &amp; running injuries</li>
-            <li>Knee pain related to foot posture</li>
-          </ul>
+    <main class="site-main">
+      <section class="section" id="who-we-are">
+        <div class="card-surface">
+          <div class="card">
+            <h2>Who we are</h2>
+            <div class="columns">
+              <div class="column">
+                <h3>Caring, experienced podiatry in the Inner West</h3>
+                <p>
+                  Inner West Podiatry is a friendly local podiatry clinic based in Glebe, focused on helping people of
+                  all ages walk more comfortably. With experience across general foot care, biomechanics and long-term
+                  conditions, we take the time to listen, explain and build a plan that makes sense in real life.
+                </p>
+                <p>
+                  Whether you&apos;re on your feet all day at work, chasing kids in the park, training for a run or managing
+                  a health condition like diabetes, we work with you to get your feet feeling as good as they can.
+                </p>
+              </div>
+              <div class="column">
+                <h3>Personal, one-on-one care</h3>
+                <p>
+                  Every appointment is one-on-one with your podiatrist, with time to go through your history, examine
+                  your feet and lower limbs, and explain what&apos;s going on in plain language. You&apos;ll leave knowing what
+                  the plan is, why it should help, and what you can do at home between visits.
+                </p>
+                <p>
+                  Inner West Podiatry welcomes patients referred under Medicare chronic disease plans, Department of
+                  Veterans&apos; Affairs, private health insurance and self-referred patients.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="column">
-          <h3>Skin, nails &amp; general care</h3>
-          <ul class="treat-list">
-            <li>Ingrown toenails (conservative &amp; surgical options)</li>
-            <li>Corns, callus &amp; cracked heels</li>
-            <li>Thickened or fungal nails</li>
-            <li>Plantar warts</li>
-            <li>Regular nail and skin care</li>
-          </ul>
-        </div>
-        <div class="column">
-          <h3>Children, diabetes &amp; long-term foot health</h3>
-          <ul class="treat-list">
-            <li>Children&apos;s walking patterns &amp; growing feet</li>
-            <li>Diabetic foot checks &amp; ulcer prevention</li>
-            <li>Footwear advice for school, sport &amp; work</li>
-            <li>Custom and prefabricated orthoses</li>
-            <li>Home exercise &amp; strengthening programs</li>
-          </ul>
-        </div>
-      </div>
-      <p style="margin-top:0.9rem;font-size:0.92rem;color:#e5e7eb;">
-        You&apos;ll find more detail about specific conditions and how we treat them on our
-        <a href="conditions.html" style="color:#a5f3fc;">Conditions &amp; treatments</a> page.
-      </p>
-    </section>
+      </section>
 
-    <section class="section" id="next-steps">
-      <h2>Next steps</h2>
-      <p>
-        If your feet, heels or lower legs have been sore for a while – or you&apos;re just not sure what&apos;s going on –
-        booking an assessment is a good first step. We&apos;ll talk through your story, examine how you stand and walk, and
-        build a plan that fits your life, not just your feet.
-      </p>
-      <p>
-        To make an appointment or ask a question, please call
-        <a href="tel:0280406687" style="color:#a5f3fc;">(02) 8040 6687</a>. If you&apos;re new to podiatry, our
-        <a href="faq.html" style="color:#a5f3fc;">Fees &amp; FAQs</a> page walks through what to expect at your first
-        visit.
-      </p>
-    </section>
-  </main>
+      <section class="section" id="what-we-treat">
+        <div class="card-surface">
+          <div class="card">
+            <h2>What we treat</h2>
+            <div class="columns">
+              <div class="column">
+                <h3>Pain &amp; overuse problems</h3>
+                <ul class="treat-list">
+                  <li>Heel pain &amp; plantar fasciitis</li>
+                  <li>Arch pain and flat feet</li>
+                  <li>Forefoot pain &amp; Morton&apos;s neuroma</li>
+                  <li>Shin splints &amp; running injuries</li>
+                  <li>Knee pain related to foot posture</li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3>Skin, nails &amp; general care</h3>
+                <ul class="treat-list">
+                  <li>Ingrown toenails (conservative &amp; surgical options)</li>
+                  <li>Corns, callus &amp; cracked heels</li>
+                  <li>Thickened or fungal nails</li>
+                  <li>Plantar warts</li>
+                  <li>Regular nail and skin care</li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3>Children, diabetes &amp; long-term foot health</h3>
+                <ul class="treat-list">
+                  <li>Children&apos;s walking patterns &amp; growing feet</li>
+                  <li>Diabetic foot checks &amp; ulcer prevention</li>
+                  <li>Footwear advice for school, sport &amp; work</li>
+                  <li>Custom and prefabricated orthoses</li>
+                  <li>Home exercise &amp; strengthening programs</li>
+                </ul>
+              </div>
+            </div>
+            <p style="margin-top:0.9rem;font-size:0.92rem;color:#4b5563;">
+              You&apos;ll find more detail about specific conditions and how we treat them on our
+              <a href="conditions.html">Conditions &amp; treatments</a> page.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    Inner West Podiatry · Ground Floor, 170 St Johns Road, Glebe NSW 2037 · Phone (02) 8040 6687<br />
-    Created with help from Diego Claw 🤖🦞
-  </footer>
+      <section class="section" id="next-steps">
+        <div class="card-surface">
+          <div class="card">
+            <h2>Next steps</h2>
+            <p>
+              If your feet, heels or lower legs have been sore for a while – or you&apos;re just not sure what&apos;s going on –
+              booking an assessment is a good first step. We&apos;ll talk through your story, examine how you stand and walk,
+              and build a plan that fits your life, not just your feet.
+            </p>
+            <p>
+              To make an appointment or ask a question, please call
+              <a href="tel:0280406687">(02) 8040 6687</a>. If you&apos;re new to podiatry, our
+              <a href="faq.html">Fees &amp; FAQs</a> page walks through what to expect at your first visit.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Inner West Podiatry · Ground Floor, 170 St Johns Road, Glebe NSW 2037 · Phone (02) 8040 6687<br />
+      Created with help from Diego Claw 🤖🦞
+    </footer>
+  </div>
 </body>
 </html>
