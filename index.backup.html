@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beth's Podiatry News – Foot Health, Updates & What to Watch</title>
+  <meta name="description" content="Friendly, up‑to‑date foot health news and recommendations from Beth's podiatry practice – for patients and podiatrists alike." />
+  <style>
+    :root {
+      --accent: #00a8a8;
+      --accent-soft: #e0f7f7;
+      --dark: #08323a;
+      --text: #1f3338;
+      --bg: #f7fbfc;
+      --card-bg: #ffffff;
+      --muted: #6e7b82;
+      --radius: 12px;
+      --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #e1f3fb, #f5f7fb 40%, #ffffff 70%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffffff 0%, #e1f3fb 55%, #d0ebff 100%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      padding: 1.2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #90e0ef);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 1.5rem auto 2.5rem auto;
+      padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+    .hero {
+      background: var(--card-bg);
+      border-radius: 22px;
+      padding: 1.8rem 1.8rem 1.6rem 1.8rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
+      gap: 1.75rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.15rem 0.7rem 0.18rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-tag span.icon {
+      font-size: 0.9rem;
+    }
+
+    .hero h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .hero p {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .pill {
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: #f3f6fb;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(0, 119, 182, 0.25);
+    }
+
+    .btn-primary span.icon {
+      font-size: 1rem;
+    }
+
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.85rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: #ffffff;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero-image {
+      position: relative;
+      padding-left: 0.5rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #ffffff, #e1f3fb);
+      border-radius: 18px;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+      font-size: 0.84rem;
+    }
+
+    .hero-card h3 {
+      font-size: 0.96rem;
+      color: var(--dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      padding: 0.28rem 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .badge span.icon {
+      font-size: 0.9rem;
+    }
+
+    .sections-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.3rem 1.1rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.1rem;
+      color: var(--dark);
+    }
+
+    .section-header p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .article-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .article-item {
+      padding: 0.75rem 0.65rem;
+      border-radius: 10px;
+      transition: background 0.16s ease;
+    }
+
+    .article-item:hover {
+      background: #f5f7fb;
+    }
+
+    .article-item h3 {
+      font-size: 0.98rem;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .article-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.28rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .article-summary {
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    .label-pill {
+      border-radius: 999px;
+      padding: 0.15rem 0.55rem;
+      background: #eef3ff;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    .watch-list {
+      list-style: none;
+      margin: 0.35rem 0 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .watch-item strong {
+      color: var(--dark);
+    }
+
+    .watch-tag {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .watch-link {
+      font-size: 0.82rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .watch-link:hover {
+      text-decoration: underline;
+    }
+
+&
+    .last-updated {
+      margin: 0.25rem 0 0.9rem 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .about-card {
+      margin-top: 1rem;
+      background: linear-gradient(135deg, #ffffff, #f2f7ff);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+    }
+
+    .about-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: var(--dark);
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem 1.2rem;
+      margin-top: 0.5rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    footer {
+      max-width: 1040px;
+      margin: 0 auto 1.7rem auto;
+      padding: 0 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0.9rem 1rem;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.35rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+
+      main {
+        padding: 0 1rem 2rem 1rem;
+        margin-top: 1.2rem;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.4rem 1.3rem 1.2rem 1.3rem;
+      }
+
+      .hero-image {
+        order: -1;
+        padding-left: 0;
+      }
+
+      .sections-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      footer {
+        padding: 0 1rem 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🦶</div>
+        <div class="brand-text">
+          <h1>Beth's Podiatry News</h1>
+          <p>Friendly foot health updates for Inner West patients & podiatrists</p>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#latest-news">Latest news</a>
+        <a href="#what-to-watch">What to watch</a>
+        <a href="#about-beth">About Beth</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <div class="hero-tag">
+          <span class="icon" aria-hidden="true">✨</span>
+          <span>Welcome to your monthly foot-health briefing</span>
+        </div>
+        <h2 id="hero-heading">Foot health news you can actually use</h2>
+        <p>
+          Short, practical updates from Beth's Inner West podiatry practice – created for curious
+          patients and busy podiatrists who want trustworthy, evidence‑based information
+          without the jargon overload.
+        </p>
+        <div class="hero-meta">
+          <span class="pill">Updated: March 2026</span>
+          <span class="pill">Estimated read time: ~6 minutes</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn-primary" href="#latest-news">
+            <span class="icon" aria-hidden="true">📬</span>
+            <span>Jump to the.latest news</span>
+          </a>
+          <a class="btn-secondary" href="#what-to-watch">Skip to “What to Watch” →</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-card" aria-label="Highlights this month">
+          <h3>This month in Australian foot health</h3>
+          <p>
+            From trainers and ballet flats to marathon prep – here’s what Beth is seeing,
+            reading and recommending in clinic this month.
+          </p>
+          <div class="hero-badges">
+            <span class="badge"><span class="icon" aria-hidden="true">👟</span>Running & walking comfort</span>
+            <span class="badge"><span class="icon" aria-hidden="true">💼</span>Office‑friendly footwear</span>
+            <span class="badge"><span class="icon" aria-hidden="true">🎧</span>Short videos & podcasts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sections-grid">
+      <section id="latest-news" aria-labelledby="latest-news-heading">
+        <article class="section-card">
+          <div class="section-header">
+            <div>
+              <h2 id="latest-news-heading">Latest foot health news</h2>
+              <p>Evidence‑based insights, explained in plain English.</p>
+            </div>
+            <span class="label-pill">For patients & podiatrists</span>
+          </div>
+          <ul class="article-list">
+            <li class="article-item">
+              <h3>Are your "comfy" shoes secretly tiring out your feet?</h3>
+              <div class="article-meta">
+                <span>Theme: Everyday footwear</span>
+                <span>Audience: Patients</span>
+              </div>
+              <p class="article-summary">
+                Many people choose ultra‑soft, squishy shoes because they feel comfortable
+                in the shop. The catch? If your shoes do all the work, your foot muscles
+                can switch off. Beth explains how to choose shoes that feel good <em>and</em>
+                still let your feet stay strong – including a simple 3‑step check you can
+                do in the store.
+              </p>
+            </li>
+
+            <li class="article-item">
+              <h3>Heel pain in the morning: when to stretch, when to seek help</h3>
+              <div class="article-meta">
+                <span>Theme: Plantar heel pain</span>
+                <span>Audience: Patients</span>
+              </div>
+              <p class="article-summary">
+                That first painful step out of bed isn’t just “getting older”. We walk
+                through common causes of heel pain, simple routines you can try at home,
+                and clear signs it’s time to book in with a podiatrist rather than
+                continuing to “wait and see”.
+              </p>
+            </li>
+
+            <li class="article-item">
+              <h3>Marathon season: load, recovery and realistic training feet can handle</h3>
+              <div class="article-meta">
+                <span>Theme: Sports podiatry</span>
+                <span>Audience: Patients & podiatrists</span>
+              </div>
+              <p class="article-summary">
+                Training volume often jumps faster than feet can adapt. Beth outlines a
+                foot‑friendly structure for ramping up distance, what to do when niggles
+                appear, and how podiatrists can help runners balance performance goals with
+                sensible tissue loading.
+              </p>
+            </li>
+
+            <li class="article-item">
+              <h3>For clinicians: quick screen for footwear red flags in under 2 minutes</h3>
+              <div class="article-meta">
+                <span>Theme: Clinical practice</span>
+                <span>Audience: Podiatrists</span>
+              </div>
+              <p class="article-summary">
+                A practical chair‑side checklist Beth uses to spot footwear issues during
+                busy consults. We cover sole stiffness, heel counter strength and in‑shoe
+                volume – plus simple language you can use so patients understand the “why”
+                behind your recommendations.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <aside id="what-to-watch" aria-labelledby="what-to-watch-heading">
+        <div class="section-card">
+          <div class="section-header">
+            <div>
+              <h2 id="what-to-watch-heading">What to watch, read & listen to</h2>
+              <p>Curated picks Beth likes to share with patients and colleagues.</p>
+            </div>
+          </div>
+          <ul class="watch-list">
+            <li class="watch-item">
+              <strong><a class="watch-link" href="why-our-feet-love-regular-movement.html">
+                Why our feet love regular movement
+              </a></strong><br />
+              <span class="watch-tag">Patients · Article · ~5 mins</span><br />
+              <span>
+                A friendly explainer on how gentle, regular movement supports circulation,
+                strength and balance – even if you’re not a runner.
+              </span>
+            </li>
+
+            <li class="watch-item">
+              <strong><a class="watch-link" href="footwear-function-modern-workplace.html">
+                Footwear, function and the modern workplace
+              </a></strong><br />
+              <span class="watch-tag">Clinicians · Article · ~8–10 mins</span><br />
+              <span>
+                A deeper dive into what really matters when fitting office shoes for long days
+                on hard floors, and language Beth uses in clinic.
+              </span>
+            </li>
+
+            <li class="watch-item">
+              <strong><a class="watch-link" href="five-small-habits-for-happier-feet.html">
+                Five small habits for happier feet this month
+              </a></strong><br />
+              <span class="watch-tag">Patients · Checklist · 1 page</span><br />
+              <span>
+                A simple, printable-style checklist of realistic changes patients can make
+                without gadgets or drastic routines.
+              </span>
+            </li>
+
+            <li class="watch-item">
+              <strong>Journal corner: recent research roundup</strong><br />
+              <span class="watch-tag">Clinicians · Reading list</span><br />
+              <span>
+                A quick summary of a few recent papers on plantar heel pain, running‑related
+                injuries and diabetic foot risk – distilled down to the clinical “so what?”
+                you can apply in practice.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div id="about-beth" class="about-card">
+          <h3>About Beth’s podiatry practice</h3>
+          <p>
+            Beth is an Inner West podiatrist who loves helping people stay active, comfortable and
+            confident on their feet – from first‑time walkers to lifelong runners.
+          </p>
+          <div class="about-grid">
+            <div>
+              <strong>Who this site is for</strong><br />
+              Patients wanting friendly guidance, and podiatrists who appreciate
+              practical, clinic‑tested ideas.
+            </div>
+            <div>
+              <strong>How to use it</strong><br />
+              Skim the headlines if you’re short on time, or dive deeper into the summaries
+              and recommendations when you’re ready.
+            </div>
+            <div>
+              <strong>Need personalised advice?</strong><br />
+              This content is general in nature and does not replace an appointment with a
+              qualified health professional.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      © <span id="year"></span> Beth's Podiatry News. All rights reserved.
+    </div>
+    <div>
+      This page is for general information only and is not a substitute for individual
+      medical advice.
+    </div>
+    <div>
+      Created by <a href="https://andrewrix-ctrl.github.io/diego-site/" target="_blank" rel="noopener noreferrer">Diego Claw 🤖🦞</a>.
+    </div>
+  </footer>
+
+  <script>
+    function updateLastUpdatedFromNews(data) {
+      try {
+        const el = document.querySelector(".last-updated");
+        if (!el || !data || !Array.isArray(data.articles) || !data.articles.length) return;
+        const dates = data.articles
+          .map(a => a.publishedAt)
+          .filter(Boolean)
+          .map(d => new Date(d))
+          .filter(d => !Number.isNaN(d.getTime()));
+        if (!dates.length) return;
+        const latest = new Date(Math.max(...dates));
+        const formatted = latest.toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
+        el.textContent = `News feed: refreshed from Australian podiatry sources on .`;
+      } catch (e) {
+        console.warn("Could not update last-updated label", e);
+      }
+    }
+
+
+    // Keep the year current without needing manual edits
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Load curated news from news-data.json and inject into the Latest News section
+    async function loadFootNews() {
+      const list = document.querySelector(".article-list");
+      if (!list) return;
+
+      try {
+        const resp = await fetch("news-data.json", { cache: "no-store" });
+        if (!resp.ok) {
+          console.warn("No news-data.json yet, using static content.");
+          return; // fall back to static HTML
+        }
+
+        const data = await resp.json();
+        const articles = Array.isArray(data.articles) ? data.articles : [];
+
+        if (!articles.length) {
+          console.warn("news-data.json has no articles, keeping static content.");
+          return;
+        }
+
+        // Clear existing static items
+        list.innerHTML = "";
+
+        for (const article of articles) {
+          const li = document.createElement("li");
+          li.className = "article-item";
+
+          const title = article.title || "Foot health article";
+          const summary = article.summary || "";
+          const url = article.url || "#";
+          const source = article.source || "News source";
+          const publishedAt = article.publishedAt || "";
+          const dateStr = publishedAt ? new Date(publishedAt).toLocaleDateString() : "";
+
+          li.innerHTML = `
+          <h3>${title}</h3>
+          <div class="article-meta">
+            <span>${source}</span>
+            ${dateStr ? `<span>${dateStr}</span>` : ""}
+          </div>
+          <p class="article-summary">
+            ${summary}
+          </p>
+          <p style="margin-top:0.4rem;font-size:0.82rem;">
+            <a href="${url}" target="_blank" rel="noopener noreferrer" style="color:#0077b6;text-decoration:none;">
+              Read the full article ↗
+            </a>
+          </p>
+        `;
+          list.appendChild(li);
+        }
+      } catch (err) {
+        console.error("Error loading news-data.json", err);
+      }
+    }
+
+    loadFootNews();
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "articles": [
+    {
+      "title": "How Aging Affects Foot Health and What to Do About It",
+      "summary": "Learn how aging affects foot health, from cushioning loss to joint changes, and how proper care supports comfort, balance, and mobility over time.",
+      "url": "https://www.drjameshurst.com/blog/1437008-how-aging-affects-foot-health-and-what-to-do-about-it/",
+      "source": "Drjameshurst.com",
+      "publishedAt": "2026-03-19T00:00:00Z"
+    },
+    {
+      "title": "Calcaneal spur detection from lateral foot radiographs using deep feature engineering",
+      "summary": "Researchers propose a deep feature engineering framework for detecting calcaneal spurs in X‑ray images, aiming to improve performance on smaller, curated datasets.",
+      "url": "https://www.nature.com/articles/s41598-026-44671-6",
+      "source": "Nature.com",
+      "publishedAt": "2026-03-19T00:00:00Z"
+    },
+    {
+      "title": "Your running shoes probably don't have arch support — these pairs do",
+      "summary": "A practical round‑up of running shoes with built‑in arch support for high, flat and neutral arches, from brands like Brooks, Asics and On.",
+      "url": "https://www.nbcnews.com/select/shopping/best-running-shoes-with-arch-support-rcna263980",
+      "source": "NBC News",
+      "publishedAt": "2026-03-18T00:00:00Z"
+    },
+    {
+      "title": "Diabetic foot complications prevention: Stopping amputation before it starts",
+      "summary": "An article outlining how early detection, regular foot checks and patient education can dramatically reduce the risk of diabetes‑related amputations.",
+      "url": "https://kevinmd.com/2026/03/diabetic-foot-complications-prevention-stopping-amputation-before-it-starts.html",
+      "source": "Kevinmd.com",
+      "publishedAt": "2026-03-16T00:00:00Z"
+    },
+    {
+      "title": "Dixon Elks free children's podiatry clinic is April 21",
+      "summary": "A community clinic offering free podiatry reviews for children, with a focus on bone and joint development and common concerns like in‑ or out‑toeing and foot pain.",
+      "url": "https://www.shawlocal.com/sauk-valley/2026/03/13/dixon-elks-free-childrens-podiatry-clinic-is-april-21/",
+      "source": "Shawlocal.com",
+      "publishedAt": "2026-03-14T00:00:00Z"
+    },
+    {
+      "title": "Protecting Foot Health When You Have Inflammatory Arthritis",
+      "summary": "Guidance on how inflammatory arthritis affects the feet and ankles, and practical steps patients can take to protect joint health and stay mobile.",
+      "url": "https://www.northeastfootcare.com/blog/protecting-foot-health-when-you-have-inflammatory-arthritis",
+      "source": "Northeastfootcare.com",
+      "publishedAt": "2026-03-10T00:00:00Z"
+    }
+  ]
+}
