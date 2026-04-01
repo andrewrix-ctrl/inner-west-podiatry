@@ -39,9 +39,9 @@ a:hover {
 }
 
 .top-nav {
-  background: #f9f3eb;
-  border-bottom: 1px solid #d4bfa9;
-  padding: 0.7rem 1.5rem;
+  background: #f7ebdc;
+  border-bottom: 1px solid #dfc9af;
+  padding: 0.6rem 1.5rem 0.7rem;
 }
 
 .top-nav-inner {
@@ -50,21 +50,18 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
+  gap: 1.8rem;
 }
 
 .top-nav-title {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #3f2a20;
+  display: none; /* keep it visually simple like the reference nav */
 }
 
 .top-nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  font-size: 0.9rem;
+  gap: 1.8rem;
+  font-size: 0.95rem;
 }
 
 .top-nav a {
