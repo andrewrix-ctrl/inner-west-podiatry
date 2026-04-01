@@ -75,15 +75,15 @@ a:hover {
 }
 
 /* Primary-style pill for the home link */
-.top-nav a[href="index.html"] {
+.top-nav a.active {
   background: #8b5e3c;
   color: #fdf7f0;
   border-color: #8b5e3c;
   box-shadow: 0 8px 18px rgba(63, 42, 32, 0.25);
 }
 
-/* Outline pill for the other nav items */
-.top-nav a[href$=".html"]:not([href="index.html"]) {
+/* Outline pill for non-active nav items */
+.top-nav a {
   background: transparent;
   color: #8b5e3c;
   border-color: #8b5e3c;
