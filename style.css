@@ -41,7 +41,7 @@ a:hover {
 .top-nav {
   background: #f7ebdc;
   border-bottom: 1px solid #dfc9af;
-  padding: 0.6rem 1.5rem 0.7rem;
+  padding: 0.85rem 1.5rem 0.9rem;
 }
 
 .top-nav-inner {
@@ -50,7 +50,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.2rem;
 }
 
 .top-nav-title {
@@ -60,17 +60,40 @@ a:hover {
 .top-nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 0.5rem;
   font-size: 0.95rem;
 }
 
 .top-nav a {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
   color: #8b5e3c;
   text-decoration: none;
+  background: transparent;
+}
+
+/* Primary-style pill for the home link */
+.top-nav a[href="index.html"] {
+  background: #8b5e3c;
+  color: #fdf7f0;
+  border-color: #8b5e3c;
+  box-shadow: 0 8px 18px rgba(63, 42, 32, 0.25);
+}
+
+/* Outline pill for the other nav items */
+.top-nav a[href$=".html"]:not([href="index.html"]) {
+  background: transparent;
+  color: #8b5e3c;
+  border-color: #8b5e3c;
 }
 
 .top-nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background: #7a5030;
+  color: #fdf7f0;
+  border-color: #7a5030;
 }
 
 .card-surface {
