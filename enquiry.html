@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make an enquiry – Inner West Podiatry</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ede2d4; color: #3f2a20; }
+    .page-header { padding: 2.5rem 1.5rem 1.5rem; background: #f9f3eb; border-bottom: 1px solid #d4bfa9; }
+    .page-header h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+    .page-header p { margin: 0; max-width: 720px; font-size: 0.98rem; color: #5c4332; }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+    .enquiry-card { background: #f9f3eb; border-radius: 0.9rem; padding: 1.5rem 1.7rem; border: 1px solid #e0cdb8; box-shadow: 0 10px 24px rgba(63,42,32,0.12); }
+    form { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    label { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d4bfa9;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fdf7f0;
+      color: #3f2a20;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .helper { font-size: 0.8rem; color: #7b614c; }
+    .actions { margin-top: 0.5rem; }
+    button[type="submit"] {
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid #7a5030;
+      background: #8b5e3c;
+      color: #fdf7f0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #7a5030; }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <div class="top-nav-title">Inner West Podiatry</div>
+        <div class="top-nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="conditions.html">Conditions</a>
+          <a href="kids-feet.html">Children's feet</a>
+          <a href="diabetes-foot-care.html">Diabetes</a>
+          <a href="faq.html">Fees &amp; FAQs</a>
+          <a href="enquiry.html">Make an enquiry</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <h1>Make an enquiry</h1>
+      <p>
+        If you&apos;d like to ask a question before booking, please use the form below. We&apos;ll get back to you as soon as we
+        can during clinic hours.
+      </p>
+    </header>
+
+    <main>
+      <div class="enquiry-card">
+        <form id="enquiry-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="contactMethod">Preferred contact method</label>
+            <select id="contactMethod" name="contactMethod" required>
+              <option value="">Please choose…</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+            </select>
+            <p class="helper">If you prefer phone, please include your best contact number in the enquiry box.</p>
+          </div>
+
+          <div>
+            <label for="message">Enquiry</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Send enquiry</button>
+          </div>
+        </form>
+        <p class="helper" style="margin-top:0.75rem;">
+          When you press "Send enquiry", your email program will open a new message addressed to the clinic with your
+          details pre-filled. You can review and send it from there.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      Inner West Podiatry · Ground Floor, 170 St Johns Road, Glebe NSW 2037 · Phone (02) 8040 6687<br />
+      Created with help from Diego Claw 🤖🦞
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById('enquiry-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var contact = document.getElementById('contactMethod').value;
+        var message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !contact || !message) {
+          alert('Please fill in all required fields before sending your enquiry.');
+          return;
+        }
+
+        var subject = encodeURIComponent('New podiatry enquiry from ' + name);
+        var bodyLines = [
+          'Name: ' + name,
+          'Email: ' + email,
+          'Preferred contact method: ' + (contact === 'email' ? 'Email' : 'Phone'),
+          '',
+          'Enquiry:',
+          message
+        ];
+        var body = encodeURIComponent(bodyLines.join('\n'));
+
+        var mailto = 'mailto:andrew.rix@gmail.com?subject=' + subject + '&body=' + body;
+        window.location.href = mailto;
+      });
+    })();
+  </script>
+</body>
+</html>
