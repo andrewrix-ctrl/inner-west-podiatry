@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Clinic – Inner West Podiatry</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ede2d4; color: #3f2a20; }
+    .page-header { padding: 2.5rem 1.5rem 1.5rem; background: #f9f3eb; border-bottom: 1px solid #d4bfa9; }
+    .page-eyebrow { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; color: #8b5e3c; margin-bottom: 0.35rem; }
+    .page-header h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+    .page-header p { margin: 0; max-width: 720px; font-size: 0.98rem; color: #5c4332; }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+    .clinic-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 2fr); gap: 1.4rem; align-items: flex-start; }
+    .clinic-card { background: #f9f3eb; border-radius: 0.9rem; padding: 1.4rem 1.6rem; border: 1px solid #e0cdb8; box-shadow: 0 10px 24px rgba(63,42,32,0.12); font-size: 0.95rem; }
+    .clinic-card h2 { margin-top: 0; margin-bottom: 0.6rem; font-size: 1.3rem; }
+    .clinic-card h3 { margin-top: 1rem; margin-bottom: 0.4rem; font-size: 1.05rem; }
+    .divider { margin: 0.9rem 0; border: 0; border-top: 1px solid #e0cdb8; }
+    .parking-box { margin-top: 1rem; background: #f5ebdf; border-radius: 0.9rem; padding: 1rem 1.2rem; border: 1px solid #e0cdb8; box-shadow: 0 8px 18px rgba(63,42,32,0.08); }
+    .parking-box h3 { margin-top: 0; margin-bottom: 0.4rem; font-size: 1.05rem; }
+    .clinic-image-placeholder { width: 100%; border-radius: 0.9rem; background: #e6d7c6; height: 260px; display: flex; align-items: center; justify-content: center; color: #5c4332; font-size: 0.9rem; border: 1px solid #dec7ae; }
+    @media (max-width: 768px) { .clinic-layout { grid-template-columns: minmax(0, 1fr); } }
+    a { color: #8b5e3c; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <div class="top-nav-title">Inner West Podiatry</div>
+        <div class="top-nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="conditions.html">Conditions</a>
+          <a href="kids-feet.html">Children&apos;s feet</a>
+          <a href="diabetes-foot-care.html">Diabetes</a>
+          <a href="faq.html">Fees &amp; FAQs</a>
+          <a href="our-clinic.html" class="active">Our clinic</a>
+          <a href="enquiry.html">Make an enquiry</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="page-eyebrow">INNER WEST PODIATRY – GLEBE</div>
+      <h1>Visit us in Glebe</h1>
+      <p>
+        Inner West Podiatry is conveniently located on St Johns Road in Glebe, within easy reach of public transport,
+        local cafés and the wider Inner West.
+      </p>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="clinic-layout">
+          <article class="clinic-card">
+            <h2>Our location</h2>
+            <p><strong>Inner West Podiatry</strong><br />Ground Floor<br />170 St Johns Road<br />Glebe NSW 2037</p>
+
+            <hr class="divider" />
+
+            <h3>Contact details</h3>
+            <p><strong>Phone:</strong> (02) 8040 6687</p>
+            <p><strong>SMS:</strong> 0420 464 175</p>
+            <p><strong>Email:</strong> <a href="mailto:admin@sydneyinnerwestpodiatry.com.au">admin@sydneyinnerwestpodiatry.com.au</a></p>
+
+            <hr class="divider" />
+
+            <h3>Getting here</h3>
+            <p>
+              We&apos;re easily accessible by public transport, with bus stops nearby on St Johns Road. Street parking is
+              available, and we&apos;re just a short walk from Glebe Point Road&apos;s cafés and shops.
+            </p>
+            <p>
+              The clinic is located on the ground floor with wheelchair access available. If you have any accessibility
+              requirements, please let us know when booking so we can ensure your visit is comfortable.
+            </p>
+          </article>
+
+          <div>
+            <div class="clinic-image-placeholder">
+              Clinic frontage / Glebe streetscape image
+            </div>
+            <div class="parking-box">
+              <h3>Parking information</h3>
+              <p>
+                Street parking is available on St Johns Road and surrounding streets. Please check local signage for any
+                time restrictions. Disability parking spaces are located nearby for those with permits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Inner West Podiatry · Ground Floor, 170 St Johns Road, Glebe NSW 2037 · Phone (02) 8040 6687<br />
+      Created with help from Diego Claw 🤖🦞
+    </footer>
+  </div>
+</body>
+</html>
