@@ -39,6 +39,9 @@ a:hover {
 }
 
 .top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background: #f7ebdc;
   border-bottom: 1px solid #dfc9af;
   padding: 0.85rem 1.5rem 0.9rem;
